@@ -7,7 +7,7 @@
 
 ![Jason Momoa is the universe's GIFt to humankind](https://media.giphy.com/media/3xz2BtsGiAovlaCsRG/giphy.gif)
 
-### [Online site](https://tranquil-tor-14764.heroku.com/)
+### [Online site](https://tranquil-tor-14764.herokuapp.com/)
 
 ### Development Setup
 
