@@ -1,14 +1,14 @@
 const parseGuardian = (response, responseNumber) => {
   const data = JSON.parse(response);
   let count = 0;
-  const article = data.response.results.map(
-        heading: el.fields.headline,
-        date: el.webPublicationDate.split('T')[0],
-        img_url: el.fields.thumbnail,
-        link_url: el.fields.shortUrl,(el) => {
+  const article = data.response.results.map((el) => {
     count += 1;
     if (count <= responseNumber) {
       return {
+        heading: el.fields.headline,
+        date: el.webPublicationDate.split('T')[0],
+        img_url: el.fields.thumbnail,
+        link_url: el.fields.shortUrl,
       };
     }
   });
