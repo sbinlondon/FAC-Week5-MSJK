@@ -39,6 +39,7 @@ a {
     font-weight: 400;
     padding: 8px;
 }
+
 button{
     background-color: white;
     border: 1px solid black;
@@ -46,16 +47,20 @@ button{
     text-align: center;
     color: #55575C;
 }
+
 button:hover{
     background-color: #98C1D9;
 }
+
 button:focus{
     background-color: #98C1D9;
 }
+
 main {
     display: flex;
     flex-direction: column;
 }
+
 input[type=text]{
     height: 50px;
     width: 300px;
@@ -296,4 +301,109 @@ input[type=text]{
     width: 320px;
     max-height: 200px;
     margin: 0 auto;
+}
+
+/* / * MOBILE STYLES * / */
+
+@media only screen and (max-width: 800px) {
+    body {
+        overflow: auto;
+    }
+
+    #headings {
+        display: none;
+    }
+
+    #dom-updated {
+        display: flex;
+        flex-direction: column;
+        min-height: 65vh;
+    }
+
+    #news-1,
+    #news-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 24px auto;
+    width: 75%;
+    min-height: 65vh;
+    padding: 16px;
+    background-color: #FFFFFF;
+    position: relative;
+    border: 1px solid black;
+    }
+
+    #pageOneDiv1 {
+        width: 25px;
+        height:25px;
+    }
+    
+    #pageTwoDiv1 {
+        width: 25px;
+        height:25px;
+    }
+     
+    #pageThreeDiv1 {
+        width: 25px;
+        height:25px;
+    }
+    
+    #pageOneDiv2 {
+        width: 25px;
+        height:25px;
+    }
+    
+    #pageTwoDiv2 {
+        width: 25px;
+        height:25px;
+    }
+     
+    #pageThreeDiv2 {
+        width: 25px;
+        height:25px;
+    }
+
+    #search {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form > button {
+        margin: 8px auto;
+        width: 45%;
+    }
+
+    form > label {
+        margin: 8px auto;
+    }
+
+    #child-1 > img {
+        max-width: 85%;
+    }
+
+    #child-2 > img {
+        max-width: 85%;
+    }
+    
+    #child-3 > img {
+        max-width: 85%;
+    }
+
+    #child-4 > img {
+        max-width: 85%;
+    }
+
+    #child-5 > img {
+        max-width: 85%;
+    }
+
+    #child-6 > img {
+        max-width: 85%;
+    }
 }
