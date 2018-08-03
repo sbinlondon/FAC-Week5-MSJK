@@ -65,7 +65,8 @@ input[type=text]{
     width: 50px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: 25%;
+    transform: translateX(-25%);
 }
 
 #pageTwoDiv1 {
@@ -74,7 +75,8 @@ input[type=text]{
     width: 50px;
     position: absolute;
     bottom: 0px;
-    left: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
  
 #pageThreeDiv1 {
@@ -83,7 +85,8 @@ input[type=text]{
     width: 50px;
     position: absolute;
     bottom: 0px;
-    left: 100px;
+    left: 75%;
+    transform: translateX(-75%);
 }
 
 #pageOneDiv2 {
@@ -92,7 +95,8 @@ input[type=text]{
     width: 50px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: 25%;
+    transform: translateX(-25%);
 }
 
 #pageTwoDiv2 {
@@ -101,7 +105,8 @@ input[type=text]{
     width: 50px;
     position: absolute;
     bottom: 0px;
-    left: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
  
 #pageThreeDiv2 {
@@ -110,7 +115,8 @@ input[type=text]{
     width: 50px;
     position: absolute;
     bottom: 0px;
-    left: 100px;
+    left: 75%;
+    transform: translateX(-75%);
 }
 
 #search {
