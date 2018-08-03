@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const makeRequests = require('./wait-for-data');
+const makeRequests = require('./makeRequests');
 
 const contentType = {
   '.html': 'text/html',
