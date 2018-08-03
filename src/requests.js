@@ -19,7 +19,7 @@ const getGuardianData = (res, queryString, cb) => {
 };
 const getNYTimesData = (res, queryString, cb) => {
   // Create NYT Query String
-  const urlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${process.env.NYTIMES}&q=${queryString}&sort=newest&fl=headline%2C%20web_url%2C%20pub_date%2C%20byline%2C%20multimedia&page=0`;
+  const urlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${process.env.NYTIMES}&q=${queryString}&fl=headline%2C%20web_url%2C%20pub_date%2C%20byline%2C%20multimedia&page=0`;
 
   // Make Request
   requestModule(urlNYT, (error, response, body) => {
