@@ -39,6 +39,13 @@ a {
     font-weight: 400;
     padding: 8px;
 }
+button{
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #55575C;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -178,7 +185,7 @@ input[type=text]{
 
 #child-1 > img {
     width: 320px;
-    height: auto;
+    max-height: 200px;
     margin: 0 auto;
 }
 
@@ -195,7 +202,7 @@ input[type=text]{
 
 #child-2 > img {
     width: 320px;
-    height: auto;
+    max-height: 200px;
     margin: 0 auto;
 }
 
@@ -212,7 +219,7 @@ input[type=text]{
 
 #child-3 > img {
     width: 320px;
-    height: auto;
+    max-height: 200px;
     margin: 0 auto;
 }
 
@@ -229,7 +236,7 @@ input[type=text]{
 
 #child-4 > img {
     width: 320px;
-    height: auto;
+    max-height: 200px;
     margin: 0 auto;
 }
 
@@ -246,7 +253,7 @@ input[type=text]{
 
 #child-5 > img {
     width: 320px;
-    height: auto;
+    max-height: 200px;
     margin: 0 auto;
 }
 
@@ -263,6 +270,6 @@ input[type=text]{
 
 #child-6 > img {
     width: 320px;
-    height: auto;
+    max-height: 200px;
     margin: 0 auto;
 }
