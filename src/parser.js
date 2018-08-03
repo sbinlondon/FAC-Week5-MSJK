@@ -27,9 +27,15 @@ const parseNYTimes = (response, responseNumber) => {
       } else {
         imageUrl = 'https://placeimg.com/640/480/arch';
       }
+      let date;
+      if (el.pub_date) {
+        date = el.pub_date.split('T')[0];
+      } else {
+        date = undefined;
+      }
       return {
         heading: el.headline.main,
-        date: el.pub_date.split('T')[0],
+        date,
         img_url: imageUrl,
         link_url: el.web_url,
       };
