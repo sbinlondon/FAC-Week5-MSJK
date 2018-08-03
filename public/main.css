@@ -46,6 +46,12 @@ button{
     text-align: center;
     color: #55575C;
 }
+button:hover{
+    background-color: #98C1D9;
+}
+button:focus{
+    background-color: #98C1D9;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -60,61 +66,73 @@ input[type=text]{
 }
 
 #pageOneDiv1 {
+    border-radius: 50%;
     display: flex;
     text-align: center;
     width: 50px;
+    height:50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 25%;
     transform: translateX(-25%);
 }
 
 #pageTwoDiv1 {
+    border-radius: 50%;
     display: flex;
     text-align: center;
     width: 50px;
+    height:50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
 }
  
 #pageThreeDiv1 {
+    border-radius: 50%;
     display: flex;
     text-align: center;
     width: 50px;
+    height:50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 75%;
     transform: translateX(-75%);
 }
 
 #pageOneDiv2 {
+    border-radius: 50%;
     display: flex;
     text-align: center;
     width: 50px;
+    height:50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 25%;
     transform: translateX(-25%);
 }
 
 #pageTwoDiv2 {
+    border-radius: 50%;
     display: flex;
     text-align: center;
     width: 50px;
+    height:50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
 }
  
 #pageThreeDiv2 {
+    border-radius: 50%;
     display: flex;
     text-align: center;
     width: 50px;
+    height:50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 75%;
     transform: translateX(-75%);
 }
