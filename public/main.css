@@ -20,7 +20,7 @@ h1 {
 h2 {
     color: #16181F;
     text-align: center;
-    padding: 8px;
+    padding: 4px;
     font-size: 1.5rem;
     font-weight: 700i;
 }
@@ -102,12 +102,33 @@ main {
 #search {
     text-align: center;
     background: #ECF0F1;
-    padding: 32px 0;
+    padding: 16px 0;
 }
 
 #results {
     display: flex;
-    min-height: 70vh;
+    flex-direction: column;
+}
+
+#headings {
+    display: flex;
+    text-align: center;
+    padding: 8px 0;
+}
+
+#guardian-heading, 
+#nyt-heading {
+    display: flex;
+    margin: 0 auto;
+    width: 48%;
+    padding: 8px;
+    align-content: center;
+    justify-content: center;
+}
+
+#dom-updated {
+    display: flex;
+    min-height: 65vh;
 }
 
 #news-1,
@@ -119,6 +140,7 @@ main {
     padding: 48px;
     background-color: #FFFFFF;
     position: relative;
+    border: 1px solid black;
 }
 
 #fourohfour {
