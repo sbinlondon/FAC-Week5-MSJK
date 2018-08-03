@@ -6,7 +6,7 @@ const parseGuardian = (response, responseNumber) => {
   for (let i = 0; i < responseNumber; i += 1) {
     const article = {};
     article.heading = data.response.results[i].fields.headline;
-    article.date = data.response.results[i].webPublicationDate;
+    article.date = data.response.results[i].webPublicationDate.split('T')[0];
     article.img_url = data.response.results[i].fields.thumbnail;
     article.link_url = data.response.results[i].fields.shortUrl;
     // push to parent
@@ -22,7 +22,7 @@ const parseNYTimes = (response, responseNumber) => {
   for (let i = 0; i < responseNumber; i += 1) {
     const article = {};
     article.heading = dataNY.response.docs[i].headline.main;
-    article.date = dataNY.response.docs[i].pub_date;
+    article.date = dataNY.response.docs[i].pub_date.split('T')[0];
     if (dataNY.response.docs[i].multimedia.length > 0) {
       let link = 'https://www.nytimes.com/';
       link += dataNY.response.docs[i].multimedia[0].url;
