@@ -73,10 +73,7 @@ tape('Testing results route with no query string', (t) => {
     });
 });
 
-<<<<<<< HEAD
-=======
 // commented out because Travis is being a spoilsport at 6:30 pm
->>>>>>> master
 // tape('Testing results route sends JSON', (t) => {
 //   supertest(router)
 //     .get('/results?q=brexit')
@@ -89,10 +86,5 @@ tape('Testing results route with no query string', (t) => {
 //       t.equal(parsed.hasOwnProperty('Guardian'), true, 'returned JSON has Guardian key');
 //       t.equal(parsed.hasOwnProperty('NYTimes'), true, 'returned JSON has NYTimes key');
 //       t.end();
-<<<<<<< HEAD
 //     });
 // });
-=======
-//     })
-// })
->>>>>>> master
