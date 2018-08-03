@@ -8,11 +8,11 @@ const getGuardianData = (res, queryString, cb) => {
   // Create Guardian Query String
   const urlGuardian = `https://content.guardianapis.com/search?q=${queryString}&format=json&from-date=2010-01-01&page-size=5&show-tags=contributor&show-fields=headline,thumbnail,short-url,byline&order-by=newest&order-date=published&api-key=${process.env.GUARDIAN}`;
 
-  // Make Request
   requestModule(urlGuardian, (error, response, body) => {
-    console.log('error:', error);
-    console.log('statusCode:', response && response.statusCode);
-
+    if (error) {
+      console.log('error:', error);
+      console.log('statusCode:', response && response.statusCode);
+    }
     // Format and return JSON response for sending back
     cb(res, parseGuardian(body, numberOfResults));
   });
