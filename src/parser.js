@@ -1,40 +1,41 @@
 const parseGuardian = (response, responseNumber) => {
   const data = JSON.parse(response);
-  // Create 'parent' obj property that will hold an array of articles
-  const resultObj = { Guardian: [] };
-  // loop through JSON assembling article and pushing to parent obj
-  for (let i = 0; i < responseNumber; i += 1) {
-    const article = {};
-    article.heading = data.response.results[i].fields.headline;
-    article.date = data.response.results[i].webPublicationDate.split('T')[0];
-    article.img_url = data.response.results[i].fields.thumbnail;
-    article.link_url = data.response.results[i].fields.shortUrl;
-    // push to parent
-    resultObj.Guardian.push(article);
-  }
-  // console.log(resultObj);
-  return resultObj;
+  let count = 0;
+  const article = data.response.results.map((el) => {
+    count += 1;
+    if (count <= responseNumber) {
+      return {
+        heading: el.fields.headline,
+        date: el.webPublicationDate.split('T')[0],
+        img_url: el.fields.thumbnail,
+        link_url: el.fields.shortUrl,
+      };
+    }
+  });
+  return { Guardian: article };
 };
 
 const parseNYTimes = (response, responseNumber) => {
-  const dataNY = JSON.parse(response);
-  const resultObj = { NYTimes: [] };
-  for (let i = 0; i < responseNumber; i += 1) {
-    const article = {};
-    article.heading = dataNY.response.docs[i].headline.main;
-    article.date = dataNY.response.docs[i].pub_date.split('T')[0];
-    if (dataNY.response.docs[i].multimedia.length > 0) {
-      let link = 'https://www.nytimes.com/';
-      link += dataNY.response.docs[i].multimedia[0].url;
-      article.img_url = link;
-    } else {
-      article.img_url = 'https://placeimg.com/640/480/arch';
+  const data = JSON.parse(response);
+  let count = 0;
+  const article = data.response.docs.map((el) => {
+    count += 1;
+    if (count <= responseNumber) {
+      let imageUrl;
+      if (el.multimedia.length) {
+        imageUrl = `https://www.nytimes.com/${el.multimedia[0].url}`;
+      } else {
+        imageUrl = 'https://placeimg.com/640/480/arch';
+      }
+      return {
+        heading: el.headline.main,
+        date: el.pub_date.split('T')[0],
+        img_url: imageUrl,
+        link_url: el.web_url,
+      };
     }
-    article.link_url = dataNY.response.docs[i].web_url;
-    resultObj.NYTimes.push(article);
-  }
-  // console.log(resultObj);
-  return resultObj;
+  });
+  return { NYTimes: article };
 };
 
 module.exports = { parseGuardian, parseNYTimes };
